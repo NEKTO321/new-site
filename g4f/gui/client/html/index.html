@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
-    <meta name="description" content="A conversational AI system that listens, learns, and challenges">
+    <meta name="description" content="Диалоговая система искусственного интеллекта, которая слушает, учится и бросает вызов">
     <meta property="og:title" content="ChatGPT">
     <meta property="og:image" content="https://openai.com/content/images/2022/11/ChatGPT.jpg">
-    <meta property="og:description" content="A conversational AI system that listens, learns, and challenges">
+    <meta property="og:description" content="Диалоговая система искусственного интеллекта, которая слушает, учится и бросает вызов">
     <meta property="og:url" content="https://g4f.ai">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
@@ -60,7 +60,7 @@
     </style>
     <script src="/assets/js/highlight.min.js"></script>
     <script>window.conversation_id = `{{chat_id}}`</script>
-    <title>g4f - gui</title>
+    <title>ChatGPT и другие!</title>
 </head>
 
 <body>
@@ -70,22 +70,27 @@
             <div class="top">
                 <button class="new_convo" onclick="new_conversation()">
                     <i class="fa-regular fa-plus"></i>
-                    <span>New Conversation</span>
+                    <span>Новый разговор</span>
                 </button>
             </div>
             <div class="bottom_buttons">
                 <button onclick="delete_conversations()">
                     <i class="fa-regular fa-trash"></i>
-                    <span>Clear Conversations</span>
+                    <span>Очистить разговоры</span>
                 </button>
                 <div class="info">
+                    <i class="fa-brands fa-github"></i>
+                    <span class="convo-title">ПОДДЕРЖАТЬ МЕНЯ<a href="https://www.donationalerts.com/r/zloy_ra">Donat Alerts</a>
+                    </span>
+                </div>
+                <div class="info">
                     <i class="fa-brands fa-telegram"></i>
-                    <span class="convo-title">tele ~ <a href="https://t.me/g4f_official">@g4f_official</a>
+                    <span class="convo-title">Телеграм g4f <a href="https://t.me/g4f_official">@g4f_official</a>
                     </span>
                 </div>
                 <div class="info">
                     <i class="fa-brands fa-github"></i>
-                    <span class="convo-title">github ~ <a href="https://github.com/xtekky/gpt4free">@gpt4free</a>
+                    <span class="convo-title">ГитХаб g4f <a href="https://github.com/xtekky/gpt4free">@gpt4free</a>
                     </span>
                 </div>
                 <div class="info">
@@ -97,13 +102,13 @@
         <div class="conversation">
             <div class="stop_generating stop_generating-hidden">
                 <button id="cancelButton">
-                    <span>Stop Generating</span>
+                    <span>Прекратить генерировать</span>
                     <i class="fa-regular fa-stop"></i>
                 </button>
             </div>
             <div class="regenerate regenerate-hidden">
                 <button id="regenerateButton">
-                    <span>Regenerate</span>
+                    <span>Регенерировать</span>
                     <i class="fa-solid fa-rotate"></i>
                 </button>
             </div>
@@ -122,7 +127,7 @@
                 <div class="field">
                     <input type="checkbox" id="switch" />
                     <label for="switch"></label>
-                    <span class="about">Web Access</span>
+                    <span class="about">Веб-доступ</span>
                 </div>
                 <div class="field">
                     <select name="model" id="model">
@@ -164,7 +169,7 @@
                 </div>
                 <div class="field">
                     <select name="jailbreak" id="jailbreak">
-                        <option value="default" selected>Set Jailbreak</option>
+                        <option value="default" selected>Установить джейлбрейк</option>
                         <option value="gpt-math-1.0">math 1.0</option>
                         <option value="gpt-dude-1.0">dude 1.0</option>
                         <option value="gpt-dan-1.0">dan 1.0</option>
@@ -174,7 +179,7 @@
                     </select>
                     <div class="field">
                         <select name="provider" id="provider">
-                            <option value="g4f.Provider.Auto" selected>Set Provider</option>
+                            <option value="g4f.Provider.Auto" selected>Установить провайдера</option>
                             <option value="g4f.Provider.AItianhuSpace">AItianhuSpace</option>
                             <option value="g4f.Provider.ChatgptLogin">ChatgptLogin</option>
                             <option value="g4f.Provider.ChatgptDemo">ChatgptDemo</option>
@@ -197,7 +202,7 @@
                             <option value="g4f.Provider.Bard">Bard</option>
                             <option value="g4f.Provider.Aibn">Aibn</option>
                             <option value="g4f.Provider.Bing">Bing</option>
-                            <option value="g4f.Provider.You">You</option>
+                            <option value="g4f.Provider.You">Вы</option>
                             <option value="g4f.Provider.Llama2">Llama2</option>
                             <option value="g4f.Provider.Aivvm">Aivvm</option>
                         </select>
